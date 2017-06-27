@@ -94,7 +94,7 @@ export class MdDatepickerInput<D> implements AfterContentInit, ControlValueAcces
   @Input()
   get value(): D | null {
     return this._dateAdapter.parse(this._elementRef.nativeElement.value,
-        this._dateFormats.parse.dateInput);
+        this._dateFormats.display.dateInput);
   }
   set value(value: D | null) {
     let date = this._dateAdapter.parse(value, this._dateFormats.parse.dateInput);
